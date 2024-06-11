@@ -1,7 +1,13 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .App {
+  font-family: 'poppins', sans-serif;
   text-align: center;
 }
+body{
+  font-family: 'poppins', sans-serif;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

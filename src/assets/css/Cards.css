@@ -1,0 +1,358 @@
+/* src/components/AssetCard.css */
+.assets-container {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 480px;
+    max-width: 480px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+.card_head {
+    color: white;
+    height: 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 15px 15px 0 0;
+    padding: 5px 0;
+}
+
+.card_head .card-title {
+    width: 90%;
+
+    font-weight: 600;
+
+}
+
+.card_head .i_btn {
+    color: black;
+    background-color: white;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 40px;
+    /* width: 10%; */
+}
+
+.card-description {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.card-description label {
+    font-weight: 700;
+}
+
+.card-content {
+    width: 100%;
+    height: 200px;
+}
+
+
+
+/* thread style */
+
+.thread_div {
+    height: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: red; */
+
+}
+
+.thread_div .thread_div_head {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.thread_div_head:hover{
+    background-color: rgb(0, 0, 0, 5%);
+    cursor: pointer;
+}
+.thread_div_head>span {
+    text-align: left;
+    width: 85%;
+}
+
+.thread_div_inputbod {
+    /* background-color: rgb(182, 98, 98); */
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+
+}
+
+.thread_div_inputbod .thread_div_inputbod1,
+.thread_div_inputbod .thread_div_inputbod2 {
+    width: 50%;
+   
+    height: 90px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgb(0, 0, 0, 5%);
+    box-shadow: 2px 2px 10px rgb(205, 205, 205);
+    border-radius: 15px;
+    padding: 10px 0px;
+}
+
+.thread_div_inputbod1 label,
+.thread_div_inputbod2 label {
+    width: 100%;
+    text-align: left;
+    height: 10%;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.thread_div_inputbod1 textarea,
+.thread_div_inputbod2 textarea {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: .5;
+    height: 90%;
+   resize: none;
+    width: 100%;
+    max-width: 90%;
+    border: 0px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.btns_area{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    padding: 10px 20px;
+  align-items: center;
+}
+.btns_o{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-size: 24px;
+    padding: 10px 25px;
+    /* background-color: red; */
+}
+
+.btns_oi, .btns_oii{
+    width: 35%;
+    margin-right: 10px;
+}
+.btns_oi>select,
+.btns_oii>select{
+    outline: 0px;
+    padding: 8px 5px ;
+    border: 0px;
+    font-size: 12px;
+    font-weight:500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'poppins', sans-serif;
+    box-shadow: 2px 2px 10px rgb(205, 205, 205, .7);
+    background-color: white;
+    border-radius: 15px;
+}
+.btns_oi>select:hover,
+.btns_oii>select:hover{
+background-color: rgb(0, 0, 0, 5%);
+cursor: pointer;
+
+}
+.subthread_btn{
+    padding: 10px 20px;
+    /* background-color: red; */
+    text-align: left;
+    align-items: left;
+}
+.subthread_btn button{
+    Width: 107px;
+    Height: 36px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    border: 0px;
+    font-weight: 500;
+    background-color: #0029FF;
+}
+.thread_div_sum{
+    /* background-color: red; */
+     padding: 10px 0;
+     width: 90%;
+     margin: auto;
+     border-radius: 15px;
+     
+     background-color: rgb(0, 0, 0, 5%);
+}
+.thread_div_sum_head{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 10px;
+    gap: 10px;
+    font-size: 15px;
+}
+.thread_div_sum_head span{
+  
+}
+
+.thread_div_sum_head textarea{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 10px ;
+    border: 0px;
+    border-radius: 15px;
+    opacity: .5;
+    height: 90px;
+    font-weight: 500;
+    resize: none;
+}
+
+/* Article card Styles */
+
+.article_div{
+    /* background-color: red; */
+    width: 95%;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+.article_div .article_div_head{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+.article_div_head input{
+    width: 95%;
+    background-color: white;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 0px;
+    box-shadow: 2px 2px 10px rgb(205, 205, 205, .7);
+    border-radius: 5px;
+
+}
+.article_div_cont{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+.article_div_cont input{
+    width: 95%;
+    background-color: white;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 0px;
+    box-shadow: 2px 2px 10px rgb(205, 205, 205, .7);
+    border-radius: 5px;
+}
+
+/* Display Assets styles */
+
+.display_div {
+    padding: 10px 0px;
+    height: fit-content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: red; */
+
+}
+
+.display_div .display_div_head {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+}
+.display_div_head:hover{
+    background-color: rgb(0, 0, 0, 5%);
+    cursor: pointer;
+}
+.display_div_head>span {
+    text-align: left;
+    width: 85%;
+}
+
+.display_div_inputbod {
+    /* background-color: rgb(182, 98, 98); */
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    gap: 20px;
+    width: 20%;
+    margin: auto;
+
+}   
+.displaydiv_dropdown_head{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.displaydiv_dropdown_head p{
+    width: 95%;
+    /* background-color: red; */
+    text-align: left;
+    padding: 10px 0px;
+}
+.displaydiv_dropdown_head .seemore_a{
+ /* background-color: navy; */
+width: 95%;
+align-items: right;
+text-align: right;
+font-size: 16px;
+font-weight: 600;
+padding: 0 10px;
+margin: auto;
+}
+.displaydiv_dropdown_head .seemore_a a{
+    text-decoration: none;
+    font-weight: 600;
+    color: hsl(0, 0%, 0%, 25%);
+}
