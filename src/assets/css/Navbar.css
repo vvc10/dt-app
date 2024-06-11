@@ -1,13 +1,11 @@
 .navbar {
-     background-color: #F0F0F0;
+    background-color: #F0F0F0;
     color: #fff;
     padding: 10px 60px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Add box shadow to the bottom */
-  }
-  
+}
 
 .navbar-container {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,32 +19,72 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-   align-items: center;
-   justify-items: center;
+    align-items: center;
+    justify-items: center;
 }
 
-.navbar-links button{
-    background-color: red;
+.navbar-links button {
+    background-color: transparent;
+    padding: 5px 8px;
     border: 0px solid transparent;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .navbar-links a {
     background-color: #3683F0;
-color:white;
-height: fit-content;
-font-size: 18px;
+    color: white;
+    height: fit-content;
+    font-size: 16px;
     text-decoration: none;
-    padding: 5px 8px;
-    border-radius:40px;
+    padding: 4px 8px;
+    border-radius: 40px;
 }
- 
 
 .navbar-toggle {
     display: none;
     cursor: pointer;
 }
 
+/* Dropdown Container Styles */
+.profile-container,
+.more-container {
+    position: relative;
+}
+
+.more-container .morebtn{
+    color: #3683F0;
+}
+/* Dropdown Menu Styles */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.dropdown .dropdownlinks {
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%, 70%);
+    font-size: 14px;
+    border-radius: 0;
+    background-color: transparent;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.dropdown a:hover {
+    background: #f0f0f0;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .navbar-links {
         display: none;
@@ -65,5 +103,28 @@ font-size: 18px;
 
     .navbar-links.active {
         display: flex;
+    }
+
+    .navbar-links a {
+        background-color: transparent;
+        color: white;
+        padding: 10px;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .navbar-links button {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown a {
+        padding: 10px;
     }
 }

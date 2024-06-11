@@ -1,16 +1,41 @@
 import React from 'react'
+import { useState } from 'react'
 import '../assets/css/main.css'
 import ProjectAssets from './ProjectCards'
 import data from '../data/data.json'
 import JourneyBoard from './JourneyBoard'
 import NoticeBoard from './NoticeBoard'
+import TaskModel from './TaskModel'
 const Main = () => {
+    const [showTaskModal, setTaskShowModal] = useState(false);
+
+    const handleTaskOpenModal = () => {
+        setTaskShowModal(true);
+    };
+  
+    const handleTaskCloseModal = () => {
+        setTaskShowModal(false);
+    };
+  
+    const tasksubmit = (event) => {
+      event.preventDefault();
+      const taskName = event.target.taskName.value;
+      const taskDescription = event.target.taskDescription.value;
+  
+      // Handle task submission logic here
+      console.log('Task Submitted:', taskName, taskDescription);
+  
+      // Close the modal after submission
+      handleTaskCloseModal();
+    };
+  
+
     return (
         <div className='main_sec'>
             <div className='main_head'>
                 <h1>Technical Project Management</h1>
                 <div className='mainhead_btn'>
-                    <button>Submit task</button>
+                    <button onClick={handleTaskOpenModal}>Submit task</button>
                 </div>
 
             </div>
@@ -29,6 +54,8 @@ const Main = () => {
 
             <JourneyBoard data={data.tasks} />
             <NoticeBoard data={data.notice}/>
+
+            <TaskModel showTaskModal={showTaskModal} handleTaskClose={handleTaskCloseModal} handleTaskSubmit={tasksubmit} />
         </div>
     )
 }

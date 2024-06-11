@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Technical Project Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project explores the principles of technical project management using practical examples and interactive tasks. It demonstrates how Pareto's Law (80-20 rule) can be applied to project management and cooking, illustrating the importance of planning and execution in achieving efficient outcomes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Journey Board**: An interactive component that displays project tasks and assets.
+- **Project Assets**: A list of tasks and their associated assets (videos, articles, etc.).
+- **Hover and Click Animations**: Smooth animations for better user experience.
+- **Responsive Design**: Ensures compatibility with different screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vvc10/dt-app.git
+    ```
 
-### `npm test`
+2. Navigate to the project directory:
+    ```bash
+    cd [your-project-directory]
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-### `npm run build`
+4. Start the development server:
+    ```bash
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `src/components`: Contains React components such as `JourneyBoard` and `ProjectAssets`.
+- `src/assets/css`: Contains CSS files for styling the components.
+- `src/data`: Contains the project data in JSON format.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### JourneyBoard Component
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The `JourneyBoard` component displays a floating board with project tasks and assets. It slides into view when hovered over or clicked, and hides when not in use.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Props:**
+- `data`: An object containing task and asset information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ProjectAssets Component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The `ProjectAssets` component displays a list of tasks and their details.
 
-## Learn More
+**Props:**
+- `tasks`: An array of task objects, each containing details like task title, description, and assets.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Example Data Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "tasks": [
+    {
+      "task_id": 18882,
+      "task_title": "Explore the world of management",
+      "task_description": "As a project manager, you play an important role in leading a project...",
+      "assets": [
+        {
+          "asset_id": 18883,
+          "asset_title": "Technical Project Management",
+          "asset_description": "Story of Alignment...",
+          "asset_content": "https://www.youtube.com/embed/TiMRwri1xJ8",
+          "asset_type": "display_asset",
+          "asset_content_type": "video"
+        }
+      ]
+    }
+  ]
+}

@@ -32,9 +32,10 @@ const DisplayAsset = ({ asset }) => {
                 style={{ borderRadius: isExpanded ? '15px 15px 0 0' : '15px' }}
                 onClick={toggleExpand}
             >
-                <h3 className="card-title">{asset.asset_title}
+                <h3 className="card-title">
+                {asset.asset_title}
                     <RiArrowDropDownLine
-                        style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}
+                        style={{ fontSize:'22px', transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}
                     />
                 </h3>
                 <i className='i_btn'>i</i>

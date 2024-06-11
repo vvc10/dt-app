@@ -29,6 +29,7 @@
   
 
 .mainhead_btn>button{
+    cursor: pointer;
     font-size: 15px;
     color: white;
     background-color: #0029FF;

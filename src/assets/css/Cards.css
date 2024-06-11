@@ -21,6 +21,7 @@
 }
 
 .card_head {
+    cursor: pointer;
     color: white;
     height: 10%;
     background-color: black;
@@ -35,9 +36,10 @@
 
 .card_head .card-title {
     width: 90%;
-
+    align-items: center;
     font-weight: 600;
 
+    justify-items: center;
 }
 
 .card_head .i_btn {
@@ -86,10 +88,12 @@
     font-size: 20px;
     font-weight: 600;
 }
-.thread_div_head:hover{
+
+.thread_div_head:hover {
     background-color: rgb(0, 0, 0, 5%);
     cursor: pointer;
 }
+
 .thread_div_head>span {
     text-align: left;
     width: 85%;
@@ -109,7 +113,7 @@
 .thread_div_inputbod .thread_div_inputbod1,
 .thread_div_inputbod .thread_div_inputbod2 {
     width: 50%;
-   
+
     height: 90px;
     display: flex;
     gap: 20px;
@@ -119,8 +123,9 @@
     font-weight: 500;
     font-size: 14px;
     background-color: rgb(0, 0, 0, 5%);
-    box-shadow: 2px 2px 10px rgb(205, 205, 205);
-    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgb(205, 205, 205,  .6);
+   border: 1px solid rgb(0, 0, 0, 5%);
+    border-radius: 10px;
     padding: 10px 0px;
 }
 
@@ -138,7 +143,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     opacity: .5;
     height: 90%;
-   resize: none;
+    resize: none;
     width: 100%;
     max-width: 90%;
     border: 0px;
@@ -147,55 +152,62 @@
     font-weight: 500;
     font-size: 14px;
 }
-.btns_area{
+
+.btns_area {
     display: flex;
     flex-direction: row;
     gap: 1px;
     padding: 10px 20px;
-  align-items: center;
+    align-items: center;
 }
-.btns_o{
-    width: 30%;
+
+.btns_o {
+    width: 26%;
     display: flex;
     flex-direction: row;
     gap: 12px;
-    font-size: 24px;
+    font-size: 22px;
     padding: 10px 25px;
     /* background-color: red; */
 }
 
-.btns_oi, .btns_oii{
-    width: 35%;
+.btns_oi,
+.btns_oii {
+width: 30%;
     margin-right: 10px;
 }
+
 .btns_oi>select,
-.btns_oii>select{
+.btns_oii>select {
     outline: 0px;
-    padding: 8px 5px ;
+    padding: 8px 5px;
     border: 0px;
     font-size: 12px;
-    font-weight:500;
+    font-weight: 500;
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'poppins', sans-serif;
     box-shadow: 2px 2px 10px rgb(205, 205, 205, .7);
     background-color: white;
-    border-radius: 15px;
+    border-radius: 10px;
 }
+
 .btns_oi>select:hover,
-.btns_oii>select:hover{
-background-color: rgb(0, 0, 0, 5%);
-cursor: pointer;
+.btns_oii>select:hover {
+    background-color: rgb(0, 0, 0, 5%);
+    cursor: pointer;
 
 }
-.subthread_btn{
+
+.subthread_btn {
     padding: 10px 20px;
     /* background-color: red; */
     text-align: left;
     align-items: left;
 }
-.subthread_btn button{
+
+.subthread_btn button {
     Width: 107px;
     Height: 36px;
     border-radius: 10px;
@@ -205,16 +217,18 @@ cursor: pointer;
     font-weight: 500;
     background-color: #0029FF;
 }
-.thread_div_sum{
+
+.thread_div_sum {
     /* background-color: red; */
-     padding: 10px 0;
-     width: 90%;
-     margin: auto;
-     border-radius: 15px;
-     
-     background-color: rgb(0, 0, 0, 5%);
+    padding: 10px 0;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+
+    background-color: rgb(0, 0, 0, 5%);
 }
-.thread_div_sum_head{
+
+.thread_div_sum_head {
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -223,13 +237,12 @@ cursor: pointer;
     gap: 10px;
     font-size: 15px;
 }
-.thread_div_sum_head span{
-  
-}
 
-.thread_div_sum_head textarea{
+.thread_div_sum_head span {}
+
+.thread_div_sum_head textarea {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px 10px ;
+    padding: 10px 10px;
     border: 0px;
     border-radius: 15px;
     opacity: .5;
@@ -240,14 +253,16 @@ cursor: pointer;
 
 /* Article card Styles */
 
-.article_div{
+.article_div {
     /* background-color: red; */
     width: 95%;
     margin: auto;
     font-size: 15px;
     padding: 10px 10px;
+   
 }
-.article_div .article_div_head{
+
+.article_div .article_div_head {
     width: 100%;
     font-size: 15px;
     font-weight: 600;
@@ -257,7 +272,8 @@ cursor: pointer;
     gap: 10px;
     padding: 20px 0;
 }
-.article_div_head input{
+
+.article_div_head input {
     width: 95%;
     background-color: white;
     padding: 10px 10px;
@@ -268,7 +284,8 @@ cursor: pointer;
     border-radius: 5px;
 
 }
-.article_div_cont{
+
+.article_div_cont {
     width: 100%;
     font-size: 15px;
     font-weight: 600;
@@ -278,16 +295,8 @@ cursor: pointer;
     gap: 10px;
     padding: 10px 0;
 }
-.article_div_cont input{
-    width: 95%;
-    background-color: white;
-    padding: 10px 10px;
-    font-size: 15px;
-    font-weight: 500;
-    border: 0px;
-    box-shadow: 2px 2px 10px rgb(205, 205, 205, .7);
-    border-radius: 5px;
-}
+
+ 
 
 /* Display Assets styles */
 
@@ -309,10 +318,12 @@ cursor: pointer;
     font-weight: 600;
     align-items: center;
 }
-.display_div_head:hover{
+
+.display_div_head:hover {
     background-color: rgb(0, 0, 0, 5%);
     cursor: pointer;
 }
+
 .display_div_head>span {
     text-align: left;
     width: 85%;
@@ -327,31 +338,35 @@ cursor: pointer;
     width: 20%;
     margin: auto;
 
-}   
-.displaydiv_dropdown_head{
+}
+
+.displaydiv_dropdown_head {
     width: 100%;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.displaydiv_dropdown_head p{
+
+.displaydiv_dropdown_head p {
     width: 95%;
     /* background-color: red; */
     text-align: left;
     padding: 10px 0px;
 }
-.displaydiv_dropdown_head .seemore_a{
- /* background-color: navy; */
-width: 95%;
-align-items: right;
-text-align: right;
-font-size: 16px;
-font-weight: 600;
-padding: 0 10px;
-margin: auto;
+
+.displaydiv_dropdown_head .seemore_a {
+    /* background-color: navy; */
+    width: 95%;
+    align-items: right;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: auto;
 }
-.displaydiv_dropdown_head .seemore_a a{
+
+.displaydiv_dropdown_head .seemore_a a {
     text-decoration: none;
     font-weight: 600;
     color: hsl(0, 0%, 0%, 25%);

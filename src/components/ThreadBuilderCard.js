@@ -40,7 +40,7 @@ const ThreadBuilderCard = ({ asset }) => {
             <div className='thread_div'>
                 <div className='thread_div_head' onClick={collapseThread}>
                     <span>Thread A</span>
-                    <RiArrowDropDownLine style={{ fontSize: '30px', transform: isThreadCollapsed ? 'rotate(0deg)' : 'rotate(180deg)' , transition: 'transform 0.3s ease' }} />
+                         <RiArrowDropDownLine style={{fontSize: '22px', transform: isThreadCollapsed ? 'rotate(0deg)' : 'rotate(180deg)' , transition: 'transform 0.3s ease' }} />
                 </div>
                 {!isThreadCollapsed && (
                     <div className='threaddiv_dropdown'>
