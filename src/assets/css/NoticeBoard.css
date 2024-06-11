@@ -11,6 +11,8 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    border-radius: 40px 0px 0 40px;
+
   }
   .notice_board_float.visible {
     right: -20px; /* Fully visible */

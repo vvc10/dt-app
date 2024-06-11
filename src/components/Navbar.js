@@ -4,6 +4,8 @@ import logo from '../assets/images/logo 1.png';
 import { FaTools } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +42,7 @@ const Navbar = () => {
                     </a>
                     <div className="profile-container">
                         <button className='profile_round' onClick={toggleProfileDropdown}>
-                            <FaUser/>
+                            <FaUser />
                         </button>
                         {/* {isProfileOpen && (
                             <div className="dropdown">
@@ -58,12 +60,19 @@ const Navbar = () => {
                             <div className="dropdown">
                                 <a className='dropdownlinks' href="#">Settings</a>
                                 <a className='dropdownlinks' href="#">Tasks</a>
-                             </div>
+                            </div>
                         )}
                     </div>
                 </div>
                 <div className="navbar-toggle" onClick={toggleNavbar}>
-                    <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    {
+                        isOpen ? (
+                            <RxCross1 />
+                        ) : (
+                            <RxHamburgerMenu />
+                        )
+                    }
+
                 </div>
             </div>
         </nav>
